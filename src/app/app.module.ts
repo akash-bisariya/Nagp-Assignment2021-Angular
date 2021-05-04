@@ -6,18 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent,
+    HomePageComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PasswordModule,
-    CardModule
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
