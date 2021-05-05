@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FooterComponent } from './footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CartComponent } from './cart/cart.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CartComponent } from './cart/cart.component';
     AppRoutingModule,
     PasswordModule,
     CardModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
