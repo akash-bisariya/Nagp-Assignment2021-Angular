@@ -5,7 +5,8 @@
       "brand": "Arrow",
       "color": "Blue",
       "price": 1500,
-      "image": "assets/images/shirt_image.jpg"
+      "image": "assets/images/shirt_image.jpg",
+      "description":"<p>Fabric - 100% Premium Cotton, Pre-Washed for extremely soft finish and Guaranteed 0% Shrinkage Post Washing <br> Style - This Casual Checkered shirt has Button Down collar,Full sleeves and can be worn to Smart Casual, Party or casual events Fit Type - Modern Slim Fit A good balance between Comfort and Slim Look. Please Check the Size chart before Ordering for the Perfect Fit</p>"
     },
     {
       "id": "2",
@@ -13,7 +14,8 @@
       "brand": "Duke",
       "color": "Blue",
       "price": 800,
-      "image": "assets/images/tshirt_image.jpg"
+      "image": "assets/images/tshirt_image.jpg",
+      "description":"<p>Fabric - 100% Premium Cotton, Pre-Washed for extremely soft finish and Guaranteed 0% Shrinkage Post Washing <br> Style - This Casual Checkered shirt has Button Down collar,Full sleeves and can be worn to Smart Casual, Party or casual events Fit Type - Modern Slim Fit A good balance between Comfort and Slim Look. Please Check the Size chart before Ordering for the Perfect Fit</p>"
     },
     {
       "id": "3",
@@ -21,7 +23,8 @@
       "brand": "Reebok",
       "color": "Black",
       "price": 3500,
-      "image": "assets/images/shoe_image.jpg"
+      "image": "assets/images/shoe_image.jpg",
+      "description":"Product Story The Rs-2K�S Disruptive, Layered Design Blends Early 2000S Influence With Amodernaesthetic.Past, Meet Future.Features & Benefits Running System (Rs): Puma'S Retro Running Technology That Offers Cushioning From The Forefoot Through The Heeldetails Bulky Rs Silhouettetextile Upper With Suede And Leather Overlaysfull Lace Closureembossed Shiny Lycra Eyestaystpu Gel Insert At Vamp And Heellighweight Pu Midsole With Rs Cushioning Techrubber Outsole For Durable Grip And Tractionwavy Tpu Insert At Midsolepuma Formstrip Overlay At Side With Contrast Pipingrs-2K Branded Webbing Pull Loop At Tonguefit Type- Regular"
     },
     {
       "id": "4",
@@ -29,7 +32,8 @@
       "brand": "Puma",
       "color": "Black",
       "price": 2000,
-      "image": "assets/images/track_suit_image.jpg"
+      "image": "assets/images/track_suit_image.jpg",
+      "description":"Go from working out to winding down in style. Contrast 3-Stripes run down the shoulders, sleeves and legs of this track suit. The jacket has a stand-up collar that adds to the retro look. The pants are cut in a modern tapered fit. Both pieces are made of recycled polyester plain weave for a smooth, soft feel."
     },
     {
       "id": "5",
@@ -37,7 +41,8 @@
       "brand": "Woodland",
       "color": "Black",
       "price": 6000,
-      "image": "assets/images/jacket_image.jpg"
+      "image": "assets/images/jacket_image.jpg",
+      "description":"Build Your Casual Wardrobe With This Slim Fit Classic Zipper Jacket From Blackberrys Casuale .This Reversible Style Bomber Jacket Has A Fine Quality And Features Full Sleeves . Create A Sophisticated Style By Teaming This Jacket With Pair Of Chinos And Smart Shoes."
     },
     {
       "id": "6",
@@ -45,7 +50,8 @@
       "brand": "Woodland",
       "color": "Brown",
       "price": 6000,
-      "image": "assets/images/wallet_image.jpg"
+      "image": "assets/images/wallet_image.jpg",
+      "description":"This compact wallet from our in-house label is crafted in a textured finish with one main compartment and multiple card slots. Max offers apparel, footwear and accessories for the entire family - women, men and children. Customers can expect a world-class shopping environment stocking the latest in international fashion from around the globe, as well as Max's own label of in-house designs in carefully chosen colour palettes. Pioneering the concept of ‘Latest fashion at great prices’ in India, Max is a leading fashion brand with Global presence in 19 countries. Max offer customers a one stop shop for clothing, accessories and footwear needs for the entire family and a vast choice with international fashion & quality"
     },
     {
       "id": "7",
@@ -53,7 +59,8 @@
       "brand": "Puma",
       "color": "Black",
       "price": 6000,
-      "image": "assets/images/jeans_image.jpg"
+      "image": "assets/images/jeans_image.jpg",
+      "description":"These regular fit jeans offer plenty of modern style, ready to mix and match with anything in your wardrobe to lift your look. Whether you prefer to pair with a relaxed t-shirt or a smarter long sleeve shirt, these men’s jeans are a piece that will last y All of the cotton for our clothing is sustainably sourced and always will be."
     },
     {
       "id": "8",
@@ -61,6 +68,7 @@
       "brand": "Rayban",
       "color": "Black",
       "price": 3000,
-      "image": "assets/images/sunglass_image.jpg"
+      "image": "assets/images/sunglass_image.jpg",
+      "description":"Complete The Look snazzy with a brand new pair of aviator sunglasses from Pepe Jeans. This pair is a summer favourite and perfect for a day at the beach."
     }
   ]
