@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from '../core/products';
+import { Products } from '../core/model/products';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,13 +10,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HomePageComponent implements OnInit {
 
   products: Products[] = []
-  constructor(private readonly route: ActivatedRoute) { }
+  constructor(private router:Router,private readonly route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.products = data.productList
     })
   }
+
+  getProductDetail(productCode: string) {
+    this.router.navigateByUrl('/product/' + productCode);
+  }
+
 
 
 }

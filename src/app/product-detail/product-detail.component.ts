@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Products } from '../core/products';
+import { Products } from '../core/model/products';
+import { CartItem } from '../core/model/cartItem';
+import { CartModel } from '../core/model/cartModel';
 
 @Component({
   selector: 'app-product-detail',
@@ -17,6 +19,23 @@ export class ProductDetailComponent implements OnInit {
       console.log(data);
       this.product = data.product;
     })
+  }
+
+  public addToCart(productId:string,name:string,price:string,image:string) {
+    let cartData:CartModel = <CartModel><unknown>{
+      "customer_id": "1",
+      "cartItem": [
+        {
+          "id": productId,
+          "name": name,
+          "price": price,
+          "image": image,
+          "quantity": "1"
+        }
+      ]
+    };
+    
+    localStorage.setItem('cart',JSON.stringify(cartData))
   }
 
 }

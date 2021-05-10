@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Products } from '../products';
+import { Products } from '../model/products';
+import { CartItem } from '../model/cartItem';
+import { CartModel } from '../model/cartModel';
 import { filter, map } from 'rxjs/operators'
 
 @Injectable({
@@ -23,5 +25,6 @@ export class ProductService {
       map(product => product.find(prd=>prd.id===productId)  
     ));
   }
+
 
 }

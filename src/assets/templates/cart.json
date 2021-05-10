@@ -1,0 +1,19 @@
+{
+  "customer_id":"1",
+  "cartItem": [
+    {
+      "id": "1",
+      "name": "Men's Checked Shirt",
+      "price": 1500,
+      "image": "assets/images/shirt_image.jpg",
+      "quantity": "1"
+    },
+    {
+      "id": "2",
+      "name": "T-Shirt",
+      "price": 800,
+      "image": "assets/images/tshirt_image.jpg",
+      "quantity": "1"
+    }
+  ]
+}

@@ -3,63 +3,70 @@
       "id": "1",
       "name": "Men's Checked Shirt",
       "brand": "Arrow",
-      "color": "Blue",
+      "color": "Blue, Black, Pink",
       "price": 1500,
       "image": "assets/images/shirt_image.jpg",
-      "description":"<p>Fabric - 100% Premium Cotton, Pre-Washed for extremely soft finish and Guaranteed 0% Shrinkage Post Washing <br> Style - This Casual Checkered shirt has Button Down collar,Full sleeves and can be worn to Smart Casual, Party or casual events Fit Type - Modern Slim Fit A good balance between Comfort and Slim Look. Please Check the Size chart before Ordering for the Perfect Fit</p>"
+      "category":"Men's Clothing",
+      "description":"Fabric - 100% Premium Cotton, Pre-Washed for extremely soft finish and Guaranteed 0% Shrinkage Post Washing Style - This Casual Checkered shirt has Button Down collar,Full sleeves and can be worn to Smart Casual, Party or casual events Fit Type - Modern Slim Fit A good balance between Comfort and Slim Look. Please Check the Size chart before Ordering for the Perfect Fit."
     },
     {
       "id": "2",
       "name": "T-Shirt",
       "brand": "Duke",
-      "color": "Blue",
+      "color": "Blue, Red, Orange, White, Green, Black, Brown",
       "price": 800,
       "image": "assets/images/tshirt_image.jpg",
-      "description":"<p>Fabric - 100% Premium Cotton, Pre-Washed for extremely soft finish and Guaranteed 0% Shrinkage Post Washing <br> Style - This Casual Checkered shirt has Button Down collar,Full sleeves and can be worn to Smart Casual, Party or casual events Fit Type - Modern Slim Fit A good balance between Comfort and Slim Look. Please Check the Size chart before Ordering for the Perfect Fit</p>"
+      "category":"Men's Clothing",
+      "description":"Fabric - 100% Premium Cotton, Pre-Washed for extremely soft finish and Guaranteed 0% Shrinkage Post Washing Style - This Casual Checkered shirt has Button Down collar,Full sleeves and can be worn to Smart Casual, Party or casual events Fit Type - Modern Slim Fit A good balance between Comfort and Slim Look. Please Check the Size chart before Ordering for the Perfect Fit."
     },
     {
       "id": "3",
       "name": "Sports Shoes",
       "brand": "Reebok",
-      "color": "Black",
+      "color": "Black, Blue, Violet",
       "price": 3500,
       "image": "assets/images/shoe_image.jpg",
+      "category":"Men's Footwear",
       "description":"Product Story The Rs-2K�S Disruptive, Layered Design Blends Early 2000S Influence With Amodernaesthetic.Past, Meet Future.Features & Benefits Running System (Rs): Puma'S Retro Running Technology That Offers Cushioning From The Forefoot Through The Heeldetails Bulky Rs Silhouettetextile Upper With Suede And Leather Overlaysfull Lace Closureembossed Shiny Lycra Eyestaystpu Gel Insert At Vamp And Heellighweight Pu Midsole With Rs Cushioning Techrubber Outsole For Durable Grip And Tractionwavy Tpu Insert At Midsolepuma Formstrip Overlay At Side With Contrast Pipingrs-2K Branded Webbing Pull Loop At Tonguefit Type- Regular"
     },
     {
       "id": "4",
       "name": "Track Suit",
       "brand": "Puma",
-      "color": "Black",
+      "color": "Blue, Black, Brown, Red",
       "price": 2000,
       "image": "assets/images/track_suit_image.jpg",
+      "category":"Men's Clothing",
       "description":"Go from working out to winding down in style. Contrast 3-Stripes run down the shoulders, sleeves and legs of this track suit. The jacket has a stand-up collar that adds to the retro look. The pants are cut in a modern tapered fit. Both pieces are made of recycled polyester plain weave for a smooth, soft feel."
     },
     {
       "id": "5",
       "name": "Jacket",
       "brand": "Woodland",
-      "color": "Black",
+      "color": "Black, Blue, White, Orange, Brown",
       "price": 6000,
       "image": "assets/images/jacket_image.jpg",
+      "category":"Men's Clothing",
       "description":"Build Your Casual Wardrobe With This Slim Fit Classic Zipper Jacket From Blackberrys Casuale .This Reversible Style Bomber Jacket Has A Fine Quality And Features Full Sleeves . Create A Sophisticated Style By Teaming This Jacket With Pair Of Chinos And Smart Shoes."
     },
     {
       "id": "6",
       "name": "Men's Wallet",
       "brand": "Woodland",
-      "color": "Brown",
+      "color": "Brown, Black, Blue",
       "price": 6000,
       "image": "assets/images/wallet_image.jpg",
-      "description":"This compact wallet from our in-house label is crafted in a textured finish with one main compartment and multiple card slots. Max offers apparel, footwear and accessories for the entire family - women, men and children. Customers can expect a world-class shopping environment stocking the latest in international fashion from around the globe, as well as Max's own label of in-house designs in carefully chosen colour palettes. Pioneering the concept of ‘Latest fashion at great prices’ in India, Max is a leading fashion brand with Global presence in 19 countries. Max offer customers a one stop shop for clothing, accessories and footwear needs for the entire family and a vast choice with international fashion & quality"
+      "category":"Accessories",
+      "description":"This compact wallet from our in-house label is crafted in a textured finish with one main compartment and multiple card slots. Max offers apparel, footwear and accessories for the entire family - women, men and children. Customers can expect a world-class shopping environment stocking the latest in international fashion from around the globe, as well as Max's own label of in-house designs in carefully chosen colour palettes. Pioneering the concept of ‘Latest fashion at great prices’ in India, Max is a leading fashion brand with Global presence in 19 countries. Max offer customers a one stop shop for clothing, accessories and footwear needs for the entire family and a vast choice with international fashion & quality."
     },
     {
       "id": "7",
       "name": "Denim Jeans",
       "brand": "Puma",
-      "color": "Black",
+      "color": "Blue, Black, Grey, Red",
       "price": 6000,
       "image": "assets/images/jeans_image.jpg",
+      "category":"Men's Clothing",
       "description":"These regular fit jeans offer plenty of modern style, ready to mix and match with anything in your wardrobe to lift your look. Whether you prefer to pair with a relaxed t-shirt or a smarter long sleeve shirt, these men’s jeans are a piece that will last y All of the cotton for our clothing is sustainably sourced and always will be."
     },
     {
@@ -69,6 +76,7 @@
       "color": "Black",
       "price": 3000,
       "image": "assets/images/sunglass_image.jpg",
+      "category":"Accessories",
       "description":"Complete The Look snazzy with a brand new pair of aviator sunglasses from Pepe Jeans. This pair is a summer favourite and perfect for a day at the beach."
     }
   ]

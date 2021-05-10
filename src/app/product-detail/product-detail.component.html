@@ -1,9 +1,16 @@
 <div class="card" *ngIf="product">
+    <div class="card text-center"  class="mx-auto" style="width: 18rem;">
+        <img class="card-img-top" src={{product.image}} width="150px" height="200px">
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{product.name}}</h5>
-      <p class="card-text brand">{{product.brand}}</p>
-      <p class="card-text" >Color Options:{{product.color}}</p>
-      <p class="card-text">Price: {{product.price | currency: 'INR'}}</p>
+      <p class="card-text brand">Brand : {{product.brand}}</p>
+      <p class="card-text" >Color Options : {{product.color}}</p>
+      <p class="card-text">Price : {{product.price | currency: 'INR'}}</p>
       <p class="card-text">Description : {{product.description}}</p>
+    </div>
+    <div class="p-2 bg-light border">
+        <h2><button type="button" class="btn btn-primary" 
+          (click)="addToCart(product.id,product.name,product.price,product.image)">Add To Cart</button></h2>
     </div>
   </div>
