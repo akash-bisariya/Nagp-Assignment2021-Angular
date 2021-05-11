@@ -1,10 +1,27 @@
-<!-- <div class="card" *ngIf="product">
-    <div class="card text-center"  class="mx-auto" style="width: 18rem;">
-        <img class="card-img-top" src={{product.image}} width="150px" height="200px">
-    </div>
+<div style="margin-bottom: 5em;">
+  <div class="card" *ngFor="let cartItem of cartModel.cartItem">
     <div class="card-body">
-      <h5 class="card-title">{{product.name}}</h5>
-      <p class="card-text">Price : {{product.price | currency: 'INR'}}</p>
-      <p class="card-text">Quantity : {{product.Quantity}}</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center" style="width: 18rem;">
+            <img class="card-img-top" src={{cartItem.image}} width="150px" height="200px">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="card-title">{{cartItem.name}}</h5>
+          <p class="card-text">Price : {{cartItem.price | currency: 'INR'}}</p>
+          <p class="card-text">Quantity : {{cartItem.quantity}}</p>
+          <h2><button type="button" class="btn btn-primary" (click)="remove(cartItem.id)">Remove</button></h2>
+        </div>
+      </div>
     </div>
-  </div> -->
+  </div>
+  <div class="row">
+    <div class="col-md-4" style="margin-left: 20px;">
+      <h2>Proceed To Payment</h2>
+    </div>
+    <div class="p-2 bg-light border" class="col-md-4" style="margin-left: 150px;">
+      <h2><button type="button" class="btn btn-primary" (click)="checkout()">Checkout</button></h2>
+    </div>
+  </div>
+</div>
