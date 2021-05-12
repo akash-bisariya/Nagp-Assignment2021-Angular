@@ -18,12 +18,18 @@ export class CartComponent implements OnInit {
     this.cartModel = JSON.parse(localStorage.getItem('cart'));
   }
 
-  public remove(){
-
+  public remove(id:string){
+    var cartModel = JSON.parse(localStorage.getItem('cart'));
+    for(let i=0; i<cartModel.cartItem.length;i++){
+        if(cartModel.cartItem[i].id===id){
+          cartModel.cartItem.splice(i,1)
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cartModel));
   }
 
   public checkout(){
-    
+    alert(this.cartModel.cartItem.length>1)
   }
 
 }

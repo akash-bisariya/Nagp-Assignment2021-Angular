@@ -25,7 +25,6 @@ export class ProductDetailComponent implements OnInit {
 
     let savedCart = JSON.parse(localStorage.getItem('cart'));
     if (savedCart) {
-      alert("cart is not empty");
       let cart =   {
         "id": productId,
         "name": name,
@@ -37,7 +36,6 @@ export class ProductDetailComponent implements OnInit {
       localStorage.setItem('cart', JSON.stringify(savedCart))
     }
     else {
-      alert("cart is empty");
       let cartData: CartModel = <CartModel><unknown>{
         "customer_id": "1",
         "cartItem": [

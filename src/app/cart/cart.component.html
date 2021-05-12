@@ -16,8 +16,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-4" style="margin-left: 20px;">
+  <div *ngIf="cartModel.cartItem.length>1" class="row">
+    <div  *ngIf="cartModel.cartItem" class="col-md-4" style="margin-left: 20px;">
       <h2>Proceed To Payment</h2>
     </div>
     <div class="p-2 bg-light border" class="col-md-4" style="margin-left: 150px;">
