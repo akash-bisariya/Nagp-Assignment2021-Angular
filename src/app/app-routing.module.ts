@@ -13,10 +13,11 @@ import { ProductDetailResolver } from './resolver/product-detail.resolver';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home',component: HomePageComponent, resolve:{ productList:ProductResolver }},
+  { path: 'home/category/:category',component: HomePageComponent, resolve:{ productList:ProductResolver }},
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'product/:productId', component: ProductDetailComponent, resolve: { product: ProductDetailResolver }},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

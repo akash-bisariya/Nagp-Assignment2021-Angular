@@ -5,7 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 interface Book {
   name: string;
-  author: string;
+  value: string;
  }
 
 @Component({
@@ -22,10 +22,10 @@ export class AppComponent {
   constructor(private router:Router, public translate:TranslateService) {
 
     this.books = [
-      {name:"Shop By Category", author:""},
-      {name: "Men's Clothing", author: "Author1"},
-      {name: "Men's Footwear", author: "Author2"},
-      {name: "Accessories", author: "Author3"}
+      {name:"Shop By Category", value:"0"},
+      {name: "Men's Footwear", value: "1"},
+      {name: "Accessories", value: "2"},
+      {name: "Men's Clothing", value: "3"}
       ];
 
     translate.addLangs(['en','hi']);
@@ -45,6 +45,13 @@ export class AppComponent {
     else{
       this.router.navigateByUrl('/login')
     }
+  }
+
+  categoryChanged(){
+    if(this.savedbook.value!="0")
+    this.router.navigateByUrl('/home/category/'+this.savedbook.name);
+    else
+    this.router.navigateByUrl('/home');
   }
 
 }

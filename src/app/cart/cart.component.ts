@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   cartModel:CartModel;
   flag:boolean = true;
   private storageSub= new Subject<String>();
+  localStorageChange = this.localStorageService.localStoragechanges;
   
   constructor(private readonly router:Router,private localStorageService:LocalStorageService) { }
 
@@ -21,6 +22,12 @@ export class CartComponent implements OnInit {
 
     this.watchStorage().subscribe((data:string)=>{
       alert("changed")
+    })
+
+    this.localStorageChange.subscribe({
+      next:data=>{
+        alert("data changed");
+      }
     })
    
   }
@@ -46,7 +53,7 @@ export class CartComponent implements OnInit {
   }
 
   public checkout(){
-    alert(this.cartModel.cartItem.length>1)
+    this.localStorageService.set("test","");
   }
 
 }

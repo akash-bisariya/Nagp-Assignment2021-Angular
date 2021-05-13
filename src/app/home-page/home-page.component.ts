@@ -15,6 +15,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.products = data.productList
+      console.log(this.products);
     })
   }
 
