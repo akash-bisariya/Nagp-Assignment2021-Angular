@@ -6,7 +6,8 @@
       "SUBMIT":"Submit"
   },
   "ProductDetail":{
-    "PRODUCT_ADDED_TO_CART":"Product has been added in your cart."
+    "PRODUCT_ADDED_TO_CART":"Product has been added in your cart.",
+    "ADD_TO_CART":"ajouter au panier"
   }
 
 }

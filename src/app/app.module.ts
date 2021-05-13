@@ -18,6 +18,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 export function HttpLoaderFactory(httpClient:HttpClient){
   return new TranslateHttpLoader(httpClient);
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(httpClient:HttpClient){
     FooterComponent,
     HomePageComponent,
     CartComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,7 @@ export function HttpLoaderFactory(httpClient:HttpClient){
     DropdownModule,
     FormsModule,
     CommonModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   providers: [],

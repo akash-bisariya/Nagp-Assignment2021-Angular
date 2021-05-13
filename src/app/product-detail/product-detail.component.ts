@@ -23,7 +23,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   public addToCart(productId: string, name: string, price: string, image: string) {
-
+    this.translate.use('fr');
     let savedCart = JSON.parse(localStorage.getItem('cart'));
     if (savedCart) {
       let cart =   {

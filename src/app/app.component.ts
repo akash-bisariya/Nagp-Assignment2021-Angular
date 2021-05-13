@@ -28,11 +28,11 @@ export class AppComponent {
       {name: "Men's Clothing", value: "3"}
       ];
 
-    translate.addLangs(['en','hi']);
+    translate.addLangs(['en','fr']);
     translate.setDefaultLang('en');
 
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|hi/)? browserLang : 'en');
+    translate.use(browserLang.match(/en|fr/)? browserLang : 'en');
    }
 
   title = 'NAGP-Assignment2021';

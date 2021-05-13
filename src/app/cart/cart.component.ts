@@ -53,7 +53,7 @@ export class CartComponent implements OnInit {
   }
 
   public checkout(){
-    this.localStorageService.set("test","");
+    this.router.navigateByUrl('/checkout')
   }
 
 }

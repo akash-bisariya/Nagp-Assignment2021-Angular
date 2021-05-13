@@ -9,6 +9,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { ProductResolver } from './resolver/product.resolver';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductDetailResolver } from './resolver/product-detail.resolver';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'home/category/:category',component: HomePageComponent, resolve:{ productList:ProductResolver }},
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'product/:productId', component: ProductDetailComponent, resolve: { product: ProductDetailResolver }},
+  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
