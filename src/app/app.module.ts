@@ -14,6 +14,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DropdownModule } from 'primeng/dropdown';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 export function HttpLoaderFactory(httpClient:HttpClient){
   return new TranslateHttpLoader(httpClient);
@@ -41,7 +43,8 @@ export function HttpLoaderFactory(httpClient:HttpClient){
          useFactory: HttpLoaderFactory,
          deps: [HttpClient]
        } 
-    })
+    }),
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

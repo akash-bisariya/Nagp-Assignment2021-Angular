@@ -2,6 +2,11 @@
   "Login":{
       "LOGIN":"Login",
       "USERNAME":"Username",
-      "PASSWORD":"Password"
+      "PASSWORD":"Password",
+      "SUBMIT":"Submit"
+  },
+  "ProductDetail":{
+    "PRODUCT_ADDED_TO_CART":"Product has been added in your cart."
   }
+
 }

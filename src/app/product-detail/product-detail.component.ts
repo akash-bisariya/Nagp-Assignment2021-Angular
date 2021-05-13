@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Products } from '../core/model/products';
 import { CartItem } from '../core/model/cartItem';
 import { CartModel } from '../core/model/cartModel';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-detail',
@@ -12,7 +13,7 @@ import { CartModel } from '../core/model/cartModel';
 export class ProductDetailComponent implements OnInit {
   product: Products;
 
-  constructor(private readonly route: ActivatedRoute) { }
+  constructor(private readonly route: ActivatedRoute, private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.route.data.subscribe(data => {
@@ -34,6 +35,7 @@ export class ProductDetailComponent implements OnInit {
       }
       savedCart.cartItem.push(cart)
       localStorage.setItem('cart', JSON.stringify(savedCart))
+      alert(this.translate.instant('ProductDetail')["PRODUCT_ADDED_TO_CART"])
     }
     else {
       let cartData: CartModel = <CartModel><unknown>{

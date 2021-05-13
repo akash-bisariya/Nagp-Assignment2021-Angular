@@ -4,5 +4,9 @@
       "USERNAME":"Username",
       "PASSWORD":"Password",
       "SUBMIT":"Submit"
+  },
+  "ProductDetail":{
+    "PRODUCT_ADDED_TO_CART":"Product has been added in your cart."
   }
+
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CartModel } from '../core/model/cartModel';
+import { Router } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { LocalStorageService } from '../core/services/local-storage.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,10 +11,22 @@ import { CartModel } from '../core/model/cartModel';
 })
 export class CartComponent implements OnInit {
   cartModel:CartModel;
-  constructor() { }
+  flag:boolean = true;
+  private storageSub= new Subject<String>();
+  
+  constructor(private readonly router:Router,private localStorageService:LocalStorageService) { }
 
   ngOnInit(): void {
     this.getCartDetail();
+
+    this.watchStorage().subscribe((data:string)=>{
+      alert("changed")
+    })
+   
+  }
+
+  watchStorage(): Observable<any> {
+    return this.storageSub.asObservable();
   }
 
   public getCartDetail(){
@@ -26,6 +41,8 @@ export class CartComponent implements OnInit {
         }
     }
     localStorage.setItem('cart', JSON.stringify(cartModel));
+    window.location.reload();
+    
   }
 
   public checkout(){
