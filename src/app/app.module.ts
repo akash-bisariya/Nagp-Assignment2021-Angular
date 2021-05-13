@@ -16,6 +16,8 @@ import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DropdownModule } from 'primeng/dropdown';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(httpClient:HttpClient){
   return new TranslateHttpLoader(httpClient);
@@ -44,7 +46,10 @@ export function HttpLoaderFactory(httpClient:HttpClient){
          deps: [HttpClient]
        } 
     }),
-    DropdownModule
+    DropdownModule,
+    FormsModule,
+    CommonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

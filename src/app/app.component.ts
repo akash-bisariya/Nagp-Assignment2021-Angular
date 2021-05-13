@@ -22,11 +22,10 @@ export class AppComponent {
   constructor(private router:Router, public translate:TranslateService) {
 
     this.books = [
-      {name: "Book1", author: "Author1"},
-      {name: "Book2", author: "Author2"},
-      {name: "Book3", author: "Author3"},
-      {name: "Book4", author: "Author4"},
-      {name: "Book5", author: "Author5"}
+      {name:"Shop By Category", author:""},
+      {name: "Men's Clothing", author: "Author1"},
+      {name: "Men's Footwear", author: "Author2"},
+      {name: "Accessories", author: "Author3"}
       ];
 
     translate.addLangs(['en','hi']);
