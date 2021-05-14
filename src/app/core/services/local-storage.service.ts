@@ -25,11 +25,32 @@ export class LocalStorageService {
   }
 
 
-  remove(key:string):boolean{
-    this.localstorage.removeItem(key);
+  remove(id:string):boolean{
+    var cartModel = JSON.parse(this.localstorage.getItem('cart'));
+    for(let i=0; i<cartModel.cartItem.length;i++){
+        if(cartModel.cartItem[i].id===id){
+          cartModel.cartItem.splice(i,1)
+        }
+    }
+    this.localstorage.setItem('cart', JSON.stringify(cartModel));
     this.localStoragechanges.next({
       type:'remove',
-      key
+      id
+    });
+    return true;
+  }
+
+  updateQuantity(quantity:string, productdId:string){
+    var cartModel = JSON.parse(this.localstorage.getItem('cart'));
+    for(let i=0; i<cartModel.cartItem.length;i++){
+        if(cartModel.cartItem[i].id===productdId){
+          cartModel.cartItem.quantity = quantity
+        }
+    }
+    this.localstorage.setItem('cart', JSON.stringify(cartModel));
+    this.localStoragechanges.next({
+      type:'remove',
+      productdId
     });
     return true;
   }

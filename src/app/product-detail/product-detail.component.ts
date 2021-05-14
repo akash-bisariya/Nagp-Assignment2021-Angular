@@ -54,7 +54,7 @@ export class ProductDetailComponent implements OnInit {
     }
   }
   else{
-    alert("Please Login First to Add Product!!")
+    alert("Please Login First to Add Product!!");
   }
 
 
