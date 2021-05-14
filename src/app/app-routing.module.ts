@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home',component: HomePageComponent, resolve:{ productList:ProductResolver }},
   { path: 'home/category/:category',component: HomePageComponent, resolve:{ productList:ProductResolver }},
+  { path: 'home/search/:searchTerm',component: HomePageComponent, resolve:{ productList:ProductResolver }},
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'product/:productId', component: ProductDetailComponent, resolve: { product: ProductDetailResolver }},
   { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },

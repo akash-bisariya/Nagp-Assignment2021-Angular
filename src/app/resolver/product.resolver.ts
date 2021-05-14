@@ -18,7 +18,12 @@ export class ProductResolver implements Resolve<Products[]> {
   }
  
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Products[]> {
+    const searchTerm = route.paramMap.get('searchTerm');
     const categoryId = route.paramMap.get('category');
+    if(searchTerm){
+      return this.productService.getSearchProductList(searchTerm);
+    }
+    
     return this.productService.getProductList(categoryId);
   }
 } 

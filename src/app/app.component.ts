@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 
-interface Book {
+interface Category {
   name: string;
   value: string;
  }
@@ -15,13 +15,14 @@ interface Book {
 })
 
 export class AppComponent {
-  books: Book[];
+  categories: Category[];
   selectedBook: string;
-  savedbook:Book
+  categoryName:Category
+  searchText:string="";
 
   constructor(private router:Router, public translate:TranslateService) {
 
-    this.books = [
+    this.categories = [
       {name:"Shop By Category", value:"0"},
       {name: "Men's Footwear", value: "1"},
       {name: "Accessories", value: "2"},
@@ -48,8 +49,15 @@ export class AppComponent {
   }
 
   categoryChanged(){
-    if(this.savedbook.value!="0")
-    this.router.navigateByUrl('/home/category/'+this.savedbook.name);
+    if(this.categoryName.value!="0")
+    this.router.navigateByUrl('/home/category/'+this.categoryName.name);
+    else
+    this.router.navigateByUrl('/home');
+  }
+
+  searchProduct(search:string){
+    if(search)
+    this.router.navigateByUrl('/home/search/'+search);
     else
     this.router.navigateByUrl('/home');
   }

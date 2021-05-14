@@ -23,7 +23,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   public addToCart(productId: string, name: string, price: string, image: string) {
-    this.translate.use('fr');
+    if(localStorage.getItem("isLoggedIn")){
     let savedCart = JSON.parse(localStorage.getItem('cart'));
     if (savedCart) {
       let cart =   {
@@ -52,6 +52,10 @@ export class ProductDetailComponent implements OnInit {
       };
       localStorage.setItem('cart', JSON.stringify(cartData))
     }
+  }
+  else{
+    alert("Please Login First to Add Product!!")
+  }
 
 
   }
