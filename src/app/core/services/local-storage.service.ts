@@ -40,11 +40,11 @@ export class LocalStorageService {
     return true;
   }
 
-  updateQuantity(quantity:string, productdId:string){
+  updateQuantity(quantity:string, productdId:string):boolean{
     var cartModel = JSON.parse(this.localstorage.getItem('cart'));
     for(let i=0; i<cartModel.cartItem.length;i++){
         if(cartModel.cartItem[i].id===productdId){
-          cartModel.cartItem.quantity = quantity
+          cartModel.cartItem[i].quantity = quantity
         }
     }
     this.localstorage.setItem('cart', JSON.stringify(cartModel));
@@ -56,5 +56,16 @@ export class LocalStorageService {
   }
 
 
+
+  calculateCartAmount():number{
+    var totalprice = 0;
+    var cartModel = JSON.parse(this.localstorage.getItem('cart'));
+    for(let i=0; i<cartModel.cartItem.length;i++){
+        console.log("price"+cartModel.cartItem[0].price+"quantity"+cartModel.cartItem[0].quantity)
+        totalprice = totalprice +  (parseInt(cartModel.cartItem[i].price)* parseInt(cartModel.cartItem[i].quantity))
+    }
+   
+    return totalprice;
+  }
 
 }

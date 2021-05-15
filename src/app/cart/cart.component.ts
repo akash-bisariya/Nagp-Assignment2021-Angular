@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   flag:boolean = true;
   changedQuantity:string
   private storageSub= new Subject<String>();
-  private totalPrice:string
+  private totalPrice:number;
 
   localStorageChange = this.localStorageService.localStoragechanges;
   
@@ -22,14 +22,13 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCartDetail();
-
+    this.totalPrice = this.localStorageService.calculateCartAmount()
     this.watchStorage().subscribe((data:string)=>{
-      alert("changed")
     })
 
     this.localStorageChange.subscribe({
       next:data=>{
-        alert("data changed");
+        this.totalPrice = this.localStorageService.calculateCartAmount()
       }
     })
    
@@ -50,10 +49,8 @@ export class CartComponent implements OnInit {
   }
 
   public quantityChanged(productId:string,e){
-
-    alert("productid--"+e.target.value+"---"+productId);
-    // this.localStorageService.updateQuantity()
-    this.totalPrice = "1000";
+    // this.totalPrice = e.target.value * parseInt(this.cartModel.cartItem[0].price);
+    this.localStorageService.updateQuantity(e.target.value,productId);
     
 
   }
@@ -61,5 +58,6 @@ export class CartComponent implements OnInit {
   public checkout(){
     this.router.navigateByUrl('/checkout')
   }
+
 
 }

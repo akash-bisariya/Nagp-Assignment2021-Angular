@@ -11,13 +11,16 @@
           <h5 class="card-title">{{cartItem.name}}</h5>
           <p class="card-text">Price : {{cartItem.price | currency: 'INR'}}</p>
           <p class="card-text">Quantity</p>
-          <select #quantity (change)="quantityChanged(cartItem.id, $event)">
-            <option [value]="1">1</option>
-            <option [value]="2">2</option>
-            <option [value]="3">3</option>
-            <option [value]="4">4</option>
-            <option [value]="5">5</option>
+          <select #quantity [(ngModel)]="cartItem.quantity" (change)="quantityChanged(cartItem.id, $event)">
+            <option [value]="1" [selected]="cartItem.quantity==1">1</option>
+            <option [value] ="2" [selected]="cartItem.quantity==2">2</option>
+            <option [value]="3" [selected]="cartItem.quantity==3">3</option>
+            <option [value]="4" [selected]="cartItem.quantity==4">4</option>
+            <option [value]="5" [selected]="cartItem.quantity==5">5</option>
           </select>
+          <div style="margin-top: 10px;">
+            Subtotal: {{cartItem.price*cartItem.quantity | currency :'INR':true}}
+        </div>
           <h2><button type="button" style="margin-top: 30px;" class="btn btn-primary" (click)="remove(cartItem.id)">Remove</button></h2>
         </div>
       </div>
@@ -25,32 +28,32 @@
   </div>
   <div class="row"  style="align-items: center; flex-direction: column; padding-right: 14%;" *ngIf="cartModel.cartItem.length!=0; else elseBlock">
 
-    <div class="row cart-total">
+    <div class="row cart-total" style="margin-left: 70px;" >
       <div class="col-lg-offset-6">
           <div class="cart-total-row row">
               <h3>
                   Cart overview
               </h3>
           </div>
-          <div class="cart-total-row row">
-              <div class="col-md-6 cart-total-label">
-                  subtotal
+          <div class="cart-total-row row" style="margin-left: 250px;">
+              <div class="col-md-1 cart-total-label">
+                  Subtotal
               </div>
-              <div class="col-md-6 cart-total-value">
+              <div class="col-md-2 offset-md-6 cart-total-value">
                   {{totalPrice | currency :'INR':true}}
               </div>
           </div>
-          <div class="cart-total-row row">
-              <div class="col-md-6 cart-total-label">
-                  total
+          <div class="cart-total-row row" style="margin-left: 250px;">
+              <div class="col-md-1 cart-total-label">
+                  Grand Total
               </div>
-              <div class="col-md-6 cart-total-value cart-total-price">
+              <div class="col-md-2 offset-md-6 cart-total-value cart-total-price">
                   {{totalPrice | currency :'INR':true}}
               </div>
           </div>
       </div>
   </div>
-    <div class="p-2 bg-light border" style="align-items: center;display: flex;padding-left: 43%;">
+    <div style="align-items: center;display: flex;padding-left: 45%; margin-top: 20px;">
       <h2><button type="button" class="btn btn-primary" (click)="checkout()">Checkout</button></h2>
     </div>
   </div>
