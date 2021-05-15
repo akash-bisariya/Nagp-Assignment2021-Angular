@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -10,14 +11,13 @@ export class CheckoutComponent implements OnInit {
 
   checkoutForm: FormGroup
   submitted = false;
-  constructor(public formBuilder: FormBuilder) {
+  constructor(private router: Router,public formBuilder: FormBuilder) {
     this.checkoutForm = this.formBuilder.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       address: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required]],
-      message: ['', [Validators.required]]
+      phone: ['', [Validators.required]]
     })  
    }
 
@@ -25,11 +25,11 @@ export class CheckoutComponent implements OnInit {
    submitCheckoutForm () {
      this.submitted = true;
  
-     if (this.checkoutForm.invalid) {
-         return;
-     }
- 
-     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.checkoutForm.value))
+    //  if (this.checkoutForm.invalid) {
+    //      return;
+    //  }
+
+    this.router.navigateByUrl('/order-success')
    }
 
   ngOnInit(): void {

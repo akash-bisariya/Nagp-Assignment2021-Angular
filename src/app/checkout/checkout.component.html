@@ -18,7 +18,7 @@
                 }" 
               />         
               <div *ngIf="checkoutForm.get('firstName').errors?.required" class="invalid-feedback">
-                  First name is required
+                  First Name can not be empty.
               </div>
             </div>
             <div class="col-md-6 mb-3">
@@ -36,7 +36,7 @@
                 }" 
                >
               <div *ngIf="checkoutForm.get('firstName').errors?.required" class="invalid-feedback">
-                  Last name is required
+                  Last Name can not be empty.
               </div>
           </div>
           </div>
@@ -59,7 +59,7 @@
               >
             <div class="invalid-feedback">
               <div *ngIf="checkoutForm.get('email').errors?.required">Email is required</div>
-              <div *ngIf="checkoutForm.get('email').errors?.email">Email must be a valid email address</div>
+              <div *ngIf="checkoutForm.get('email').errors?.email">Email is not valid email address</div>
             </div>
           </div>
   
@@ -113,7 +113,7 @@
   
                   >
                   <div *ngIf="checkoutForm.get('phonenumber').errors?.required" class="invalid-feedback">
-                     Please enter phone number
+                     Enter Mobile number
                   </div>
               </div>
            
@@ -124,7 +124,7 @@
             ? 'Save your  data'
             : 'Disabled until the form data is valid'
         " [disabled]="!checkoutForm.valid">
-            Continue to checkout
+            Proceed to Payment
           </button>
       </div>
     </div>
