@@ -23,39 +23,50 @@ export class ProductDetailComponent implements OnInit {
   }
 
   public addToCart(productId: string, name: string, price: string, image: string) {
-    if(localStorage.getItem("isLoggedIn")){
-    let savedCart = JSON.parse(localStorage.getItem('cart'));
-    if (savedCart) {
-      let cart =   {
-        "id": productId,
-        "name": name,
-        "price": price,
-        "image": image,
-        "quantity": "1"
-      }
-      savedCart.cartItem.push(cart)
-      localStorage.setItem('cart', JSON.stringify(savedCart))
-      alert(this.translate.instant('ProductDetail')["PRODUCT_ADDED_TO_CART"])
-    }
-    else {
-      let cartData: CartModel = <CartModel><unknown>{
-        "customer_id": "1",
-        "cartItem": [
-          {
+    if (localStorage.getItem("isLoggedIn")) {
+      let savedCart = JSON.parse(localStorage.getItem('cart'));
+      if (savedCart) {
+        if (savedCart.cartItem.length > 0) {
+          for(let i=0; i<savedCart.cartItem.length;i++){
+            if(savedCart.cartItem[i].id==productId){
+              savedCart.cartItem[i].quantity++;
+            }
+          }
+        }
+        else {
+          let cart = {
             "id": productId,
             "name": name,
             "price": price,
             "image": image,
             "quantity": "1"
           }
-        ]
-      };
-      localStorage.setItem('cart', JSON.stringify(cartData))
+          savedCart.cartItem.push(cart)
+        }
+
+        localStorage.setItem('cart', JSON.stringify(savedCart))
+
+        alert(this.translate.instant('ProductDetail')["PRODUCT_ADDED_TO_CART"])
+      }
+      else {
+        let cartData: CartModel = <CartModel><unknown>{
+          "customer_id": "1",
+          "cartItem": [
+            {
+              "id": productId,
+              "name": name,
+              "price": price,
+              "image": image,
+              "quantity": "1"
+            }
+          ]
+        };
+        localStorage.setItem('cart', JSON.stringify(cartData))
+      }
     }
-  }
-  else{
-    alert("Please Login First to Add Product!!");
-  }
+    else {
+      alert("Please Login First to Add Product!!");
+    }
 
 
   }
