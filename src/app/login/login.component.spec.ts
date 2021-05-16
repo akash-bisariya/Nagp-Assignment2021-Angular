@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
 
-describe('LoginComponent', () => {
+fdescribe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
@@ -19,7 +19,11 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should login after valid user', () => {
+    expect(component.loginForm.valid).toBeFalsy();
+    component.loginForm.controls['username'].setValue("user");
+    component.loginForm.controls['password'].setValue("user")
     expect(component).toBeTruthy();
+    component.submitLogin();
   });
 });
