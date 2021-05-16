@@ -8,31 +8,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
-
   checkoutForm: FormGroup
   submitted = false;
-  constructor(private router: Router,public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder, private router: Router) {
     this.checkoutForm = this.formBuilder.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       address: ['', [Validators.required]],
+      address2:[''],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required]]
+      phonenumber: ['', [Validators.required]],
+      // state: ['', [Validators.required]],
+      // zip: ['', [Validators.required]],
     })  
-   }
-
-   get f() { return this.checkoutForm.controls; }
-   submitCheckoutForm () {
-     this.submitted = true;
- 
-    //  if (this.checkoutForm.invalid) {
-    //      return;
-    //  }
-
-    this.router.navigateByUrl('/order-success')
    }
 
   ngOnInit(): void {
   }
+  get f() { return this.checkoutForm.controls; }
+  submitCheckoutForm () {
+    this.submitted = true;
 
+    // stop here if form is invalid
+    if (this.checkoutForm.invalid) {
+        return;
+    }
+
+    this.router.navigateByUrl('/order-success');
+  }
 }

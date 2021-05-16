@@ -1,5 +1,6 @@
 <div style="margin-bottom: 5em;">
-  <div class="card" *ngFor="let cartItem of cartModel.cartItem">
+  <h4 *ngIf="!cartModel">Your Cart is Empty.</h4>
+  <div class="card" *ngFor="let cartItem of cartModel.cartItem" >
     <div class="card-body">
       <div class="row">
         <div class="col-md-4 offset-md-3">
