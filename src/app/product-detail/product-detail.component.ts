@@ -26,12 +26,28 @@ export class ProductDetailComponent implements OnInit {
     if (localStorage.getItem("isLoggedIn")) {
       let savedCart = JSON.parse(localStorage.getItem('cart'));
       if (savedCart) {
+        var cartItemAlreadySaved = false;
+        console.log(savedCart);
         if (savedCart.cartItem.length > 0) {
+          console.log("cart is not empty")
           for(let i=0; i<savedCart.cartItem.length;i++){
             if(savedCart.cartItem[i].id==productId){
               savedCart.cartItem[i].quantity++;
+              console.log("cartitem already there")
+              cartItemAlreadySaved = true;
             }
           }
+          if(!cartItemAlreadySaved){
+            let cart = {
+              "id": productId,
+              "name": name,
+              "price": price,
+              "image": image,
+              "quantity": "1"
+            }
+            savedCart.cartItem.push(cart)
+          }
+
         }
         else {
           let cart = {
