@@ -48,7 +48,6 @@
             type="email"
             class="form-control"
             id="email"
-            placeholder="you@example.com"
             formControlName="email"
             required
             [ngClass]="{
@@ -69,7 +68,6 @@
             type="text"
             class="form-control"
             id="address"
-            placeholder="1234 Main St"
             formControlName="address"
             required
             [ngClass]="{
@@ -107,7 +105,7 @@
           ? 'Save your  data'
           : 'Disabled until the form data is valid'
       " [disabled]="!checkoutForm.valid">
-          Proceed To Payment..
+          Proceed To Payment
         </button>
     </div>
   </div>

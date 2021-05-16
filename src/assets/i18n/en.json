@@ -3,11 +3,25 @@
       "LOGIN":"Login",
       "USERNAME":"Username",
       "PASSWORD":"Password",
-      "SUBMIT":"Submit"
+      "SUBMIT":"Submit",
+      "LOGIN_ERROR":"Username or password is incorrect."
   },
   "ProductDetail":{
     "PRODUCT_ADDED_TO_CART":"Product has been added in your cart.",
     "ADD_TO_CART":"Add To Cart"
+  },
+  "HomePage":{
+    "SHOP_BY_CATEGORY":"Shop By Category",
+    "MEN_FOOTWEAR":"Men's Footwear",
+    "ACCESSORIES":"Accessories",
+    "MEN_CLOTHING":"Men's Clothing",
+    "LOGOUT":"Logout",
+    "MY_CART":"MyCart",
+    "SEARCH":"Search",
+    "HELP":"Help",
+    "PRIVACY_POLICY":"Privacy Policy",
+    "CREATED_BY":"CreatedBy"
+
   }
 
 }

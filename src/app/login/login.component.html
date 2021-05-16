@@ -6,19 +6,19 @@
             </div>
             <div class="p-2 bg-light border">
                 <h2>
-                    <input type="text"  [(ngModel)]="user_name" pInputText class="p-inputtext-lg" placeholder="Username" formControlName="username">
+                    <input type="text"  [(ngModel)]="user_name" pInputText class="p-inputtext-lg" placeholder="{{'Login.USERNAME' | translate}}" formControlName="username">
                 </h2>
             </div>
             <div class="p-2 bg-light border">
                 <h2>
-                    <input type="password" [(ngModel)]="user_password" pInputText class="p-inputtext-lg" placeholder="Password" formControlName="password"/>
+                    <input type="password" [(ngModel)]="user_password" pInputText class="p-inputtext-lg" placeholder="{{'Login.PASSWORD' | translate}}" formControlName="password"/>
                 </h2> 
             </div>
             <div class="p-2 bg-light border">
                 <h2><button type="button" class="btn btn-primary" (click)="submitLogin()" [disabled]="!loginForm.valid">{{'Login.SUBMIT' | translate}}</button></h2>
             </div>
             <span class="text-danger" role="alert" *ngIf="invalidUser">
-                Username and password is incorrect.
+                {{'Login.LOGIN_ERROR' | translate}}
             </span>
         </div>
     </div>

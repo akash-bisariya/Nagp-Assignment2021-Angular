@@ -49,7 +49,6 @@ export class CartComponent implements OnInit {
   }
 
   public quantityChanged(productId:string,e){
-    // this.totalPrice = e.target.value * parseInt(this.cartModel.cartItem[0].price);
     this.localStorageService.updateQuantity(e.target.value,productId);
     
 

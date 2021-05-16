@@ -8,22 +8,28 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" style="cursor: pointer" (click)="Login()"><span
-            *ngIf="localStorageUser.getItem('isLoggedIn') == 'true'; else elseBlock"> Logout</span></a>
-        <ng-template #elseBlock>Login</ng-template>
+            *ngIf="localStorageUser.getItem('isLoggedIn') == 'true'; else elseBlock">{{'Login.LOGOUT' | translate}}</span></a>
+        <ng-template #elseBlock>{{'Login.LOGIN' | translate}}</ng-template>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/cart']" routerLinkActive="active">MyCart</a>
+        <a class="nav-link" [routerLink]="['/cart']" routerLinkActive="active">{{'HomePage.MY_CART' | translate}}</a>
       </li>
     </ul>
 
+    <select #langselect style="margin-right: 20px;"  (change)="languageChanged($event)">
+      <option [value]="0">Change Language</option>
+      <option [value]="1"> English</option>
+      <option [value]="2">French</option>
+    </select>
+    
     <p-dropdown [options]="categories" (onChange)="categoryChanged()" [(ngModel)]="categoryName"
       style="margin-right: 20px;" optionLabel="name"></p-dropdown>
 
     <form class="form-inline" justify-content-center>
-      <input class="form-control mr-sm-2" #searchText type="search" placeholder="Search"
+      <input class="form-control mr-sm-2" #searchText type="search" placeholder="{{'HomePage.SEARCH' | translate}}"
         aria-label="Search">
 
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchProduct(searchText.value)">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchProduct(searchText.value)">{{'HomePage.SEARCH' | translate}}</button>
     </form>
   </div>
 </nav>

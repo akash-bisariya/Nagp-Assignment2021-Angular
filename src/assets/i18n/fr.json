@@ -1,13 +1,27 @@
 {
   "Login":{
-      "LOGIN":"Login",
-      "USERNAME":"Username",
-      "PASSWORD":"Password",
-      "SUBMIT":"Submit"
+      "LOGIN":"Connexion",
+      "USERNAME":"Nom d'utilisateur",
+      "PASSWORD":"Mot de passe",
+      "SUBMIT":"Soumettre",
+      "LOGIN_ERROR":"L'identifiant ou le mot de passe est incorrect."
   },
   "ProductDetail":{
     "PRODUCT_ADDED_TO_CART":"Product has been added in your cart.",
     "ADD_TO_CART":"ajouter au panier"
+  },
+  "HomePage":{
+    "SHOP_BY_CATEGORY":"Acheter par catégorie",
+    "MEN_FOOTWEAR":"Chaussures pour hommes",
+    "ACCESSORIES":"Accessoires",
+    "MEN_CLOTHING":"Vêtements pour hommes",
+    "MY_CART":"Mon panier",
+    "LOGOUT":"Se déconnecter",
+    "SEARCH":"Rechercher",
+    "HELP":"Aider",
+    "PRIVACY_POLICY":"Politique de confidentialité",
+    "CREATED_BY":"Créé par"
+
   }
 
 }
