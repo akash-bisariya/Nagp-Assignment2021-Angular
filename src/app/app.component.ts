@@ -39,9 +39,10 @@ export class AppComponent {
   title = 'NAGP-Assignment2021';
   localStorageUser = localStorage;
 
-  testLogin(){
+  Login(){
     if(localStorage.getItem("isLoggedIn")=='true'){
         localStorage.removeItem("isLoggedIn")
+        localStorage.removeItem('cart')
     }
     else{
       this.router.navigateByUrl('/login')

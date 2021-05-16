@@ -12,22 +12,27 @@ export class LoginService implements OnInit {
     throw new Error("Method not implemented.");
   }
 
-  constructor() { }
+  constructor() {
+    this.saveUser("user", "user", "test@test.com", "7651991216")
+  }
 
-private getUsers(): UserModel[] {
-  this.users = [{
-    "id": "1",
-    "username": "user",
-    "password": "user",
-    "email":"",
-    "mobile":""
-  }];
-  return this.users;
-}
+  validateUser(username: string, password: string): boolean {
+    if (this.users[0].username == username && this.users[0].password == password) {
+      return true;
+    }
+    else
+      return false;
+  }
 
-private validateUser(username:string, password:string){
-  
-}
+  private saveUser(username: string, password: string, email: string, mobile: string) {
+    this.users = [{
+      "id": "1",
+      "username": username,
+      "password": password,
+      "email": email,
+      "mobile": mobile
+    }]
+  }
 
 
 }

@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="loginForm">
     <div class="mx-auto" style="width: 400px; margin-top: 100px;">
         <div class="d-grid gap-3">
             <div class="p-2 bg-light border">
@@ -6,17 +6,20 @@
             </div>
             <div class="p-2 bg-light border">
                 <h2>
-                    <input type="text" pInputText class="p-inputtext-lg" placeholder="Username">
+                    <input type="text"  [(ngModel)]="user_name" pInputText class="p-inputtext-lg" placeholder="Username" formControlName="username">
                 </h2>
             </div>
             <div class="p-2 bg-light border">
                 <h2>
-                    <input type="password" pInputText class="p-inputtext-lg" placeholder="Password"/>
-                </h2>
+                    <input type="password" [(ngModel)]="user_password" pInputText class="p-inputtext-lg" placeholder="Password" formControlName="password"/>
+                </h2> 
             </div>
             <div class="p-2 bg-light border">
-                <h2><button type="button"   class="btn btn-primary" (click)="submitLogin()">{{'Login.SUBMIT' | translate}}</button></h2>
+                <h2><button type="button" class="btn btn-primary" (click)="submitLogin()" [disabled]="!loginForm.valid">{{'Login.SUBMIT' | translate}}</button></h2>
             </div>
+            <span class="text-danger" role="alert" *ngIf="invalidUser">
+                Username and password is incorrect.
+            </span>
         </div>
     </div>
 </form>

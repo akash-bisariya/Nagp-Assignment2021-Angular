@@ -18,8 +18,6 @@ export class CheckoutComponent implements OnInit {
       address2:[''],
       email: ['', [Validators.required, Validators.email]],
       phonenumber: ['', [Validators.required]],
-      // state: ['', [Validators.required]],
-      // zip: ['', [Validators.required]],
     })  
    }
 
@@ -29,7 +27,6 @@ export class CheckoutComponent implements OnInit {
   submitCheckoutForm () {
     this.submitted = true;
 
-    // stop here if form is invalid
     if (this.checkoutForm.invalid) {
         return;
     }

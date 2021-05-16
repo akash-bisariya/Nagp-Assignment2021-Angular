@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" style="cursor: pointer" (click)="testLogin()"><span
+        <a class="nav-link" style="cursor: pointer" (click)="Login()"><span
             *ngIf="localStorageUser.getItem('isLoggedIn') == 'true'; else elseBlock"> Logout</span></a>
         <ng-template #elseBlock>Login</ng-template>
       </li>
